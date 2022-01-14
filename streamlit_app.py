@@ -270,7 +270,7 @@ EXTERNAL_DEPENDENCIES = {
         "size": 245780000
     },
     "yolov4.cfg": {
-        "url": "https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg",
+        "url": "https://github.com/chittoorking/Yolov4-demo/blob/main/yolov4-custom.cfg",
         "size": 11900
     }
 }
