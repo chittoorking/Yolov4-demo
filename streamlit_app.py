@@ -266,7 +266,7 @@ DATA_URL_ROOT = "https://streamlit-self-driving.s3-us-west-2.amazonaws.com/"
 # External files to download.
 EXTERNAL_DEPENDENCIES = {
     "yolov4.weights": {
-        "url": "https://drive.google.com/file/d/1siouQfFcGhEkgZ2EF3I_6qNctM0p3558/view?usp=sharing",
+        "url": "https://drive.google.com/uc?export=download&id=1siouQfFcGhEkgZ2EF3I_6qNctM0p3558",
         "size": 245780000
     },
     "yolov4.cfg": {
