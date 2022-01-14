@@ -202,7 +202,7 @@ def yolo_v4(image, confidence_threshold, overlap_threshold):
     # Load the network. Because this is cached it will only happen once.
     @st.cache(allow_output_mutation=True)
     def load_network(config_path, weights_path):
-        net = cv2.dnn.readNet(config_path, weights_path)
+        net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
         output_layer_names = net.getLayerNames()
         output_layer_names = [output_layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
         return net, output_layer_names
@@ -266,11 +266,11 @@ DATA_URL_ROOT = "https://streamlit-self-driving.s3-us-west-2.amazonaws.com/"
 # External files to download.
 EXTERNAL_DEPENDENCIES = {
     "yolov4.weights": {
-        "url": "https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights",
+        "url": "https://pjreddie.com/media/files/yolov3.weights",
         "size": 245780000
     },
     "yolov4.cfg": {
-        "url": "https://github.com/AlexeyAB/darknet/blob/master/cfg/yolov4_new.cfg",
+        "url": "https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg",
         "size": 11900
     }
 }
