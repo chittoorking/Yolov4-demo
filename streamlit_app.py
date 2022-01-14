@@ -202,7 +202,7 @@ def yolo_v4(image, confidence_threshold, overlap_threshold):
     # Load the network. Because this is cached it will only happen once.
     @st.cache(allow_output_mutation=True)
     def load_network(config_path, weights_path):
-        net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
+        net = cv2.dnn.readNet( weights_path,config_path)
         output_layer_names = net.getLayerNames()
         output_layer_names = [output_layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
         return net, output_layer_names
